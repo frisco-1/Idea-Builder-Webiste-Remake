@@ -6,10 +6,8 @@ import { ProductData } from './ProductData';
 export default function ProductList() {
   const [query, setQuery] = useState("");
 
-  const search = (product) => {
-    return product.filter(item => item.product.toLowerCase().includes(query));
-  };
-
+  const search = ProductData.filter(item => item.product.toLowerCase().includes(query));
+  
   return (
     <>
       <div className= 'flex flex-col items-center container mx-auto py-5'>
